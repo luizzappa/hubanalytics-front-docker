@@ -1,0 +1,9 @@
+.hub-logo {
+  height: 2.2rem;
+  padding-right: 0.25rem;
+  pointer-events: none;
+}
+
+.bg-header {
+  background-color: #006298;
+}

@@ -1,0 +1,33 @@
+.fab-filter {
+  position: fixed;
+  top: 5rem;
+  left: 0.8rem;
+  z-index: 1000;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background-color: rgba(161, 219, 253, 1);
+  filter: brightness(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-decoration: none;
+  user-select: none;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.fab-filter:hover {
+  filter: brightness(90%);
+}
+
+.fab-filter:active {
+  filter: brightness(95%);
+}
+
+.fab-filter > img {
+  padding-top: 0.3rem;
+}
+
+.filter-menu-switches {
+  margin-top: 1rem;
+}
