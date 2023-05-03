@@ -12,6 +12,8 @@ Clone o repositório e instale localmente as bibliotecas utlizando o comando:
 npm install
 ```
 
+As URL's da API estão parametrizadas no arquivo `env.ts` para facilitar sua alteração.
+
 ## Como executar
 
 Após a instalção das bibliotecas, no terminal execute o comando:
