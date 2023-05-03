@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# MVP Sprint PUC-Rio - Engenharia de Software
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse repositório contém o `frontend` do primeiro MVP para a pós-graduação em Engenharia de Software da PUC-Rio. Ele foi desenvolvindo em `Typescript` utilizando a biblioteca `React` e `Bootstrap` para o layout.
 
-## Available Scripts
+Nesse projeto criei um catálogo de dashboards, utilizando a técnica de infinite scroll para que todos os itens não sejam carregados ao mesmo tempo, prejudicando a performance e o tempo de abertura da página. Ao chegar ao final da página, uma nova requisição `backend` retorna mais itens e assim por diante.
 
-In the project directory, you can run:
+## Como instalar
 
-### `npm start`
+Clone o repositório e instale localmente as bibliotecas utlizando o comando:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm instal
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Como executar
 
-### `npm test`
+No terminal execute o comando:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm run start
+```
 
-### `npm run build`
+O servidor irá iniciar na porta 3000. Ao finalizar a incialização do servidor, automaticamente uma janela do browser irá abrir. Se isso não ocorrer, a página pode ser acessada através do endereço: [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Atenção**: esse repositório contempla apenas o `frontend`, para que a página retorne os itens cadastrados, é necessário também iniciar o `backend` para que a API esteja disponível. O `backend` encontra-se nesse [repositório](https://github.com/luizzappa/hubanalytics-back).
