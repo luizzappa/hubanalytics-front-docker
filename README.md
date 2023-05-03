@@ -4,6 +4,8 @@ Esse repositório contém o `frontend` do primeiro MVP para a pós-graduação e
 
 Nesse projeto criei um catálogo de dashboards, utilizando a técnica de infinite scroll para que todos os itens não sejam carregados ao mesmo tempo, prejudicando a performance e o tempo de abertura da página. Ao chegar ao final da página, uma nova requisição ao `backend` retorna mais itens e assim por diante.
 
+![hub-puc](https://user-images.githubusercontent.com/65685842/236071055-67ba59d8-54dc-4ec8-93b5-ab27e7d74f07.gif)
+
 ## Como instalar
 
 Clone o repositório e instale localmente as bibliotecas utlizando o comando:
