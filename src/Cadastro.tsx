@@ -53,7 +53,6 @@ function Cadastro() {
 
   const updateState: ChangeEventHandler = e => {
     const currId = e.currentTarget.getAttribute('id')!;
-    console.log('called update', currId)
     setState({
       ...state,
       [currId]: currId === 'uploaded_images'
@@ -68,6 +67,41 @@ function Cadastro() {
     setEditData(undefined);
     setState(getState());
   }
+
+  const extrairTags = () => {
+
+    if (!state.descricao) {
+      alert('É necessário uma descrição para geração de tags automáticas!');
+      return;
+    }
+    
+    fetch(
+      endpoints.extract_keywords,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+          "extractors": "entities,entailments",
+          "text": state.descricao
+        })
+      }
+    )
+    .then((res) => res.json())
+    .then(json => {
+      if (!json['found']) {
+        alert('Não foram identificadas palavras chaves na descriação');
+        return;
+      }
+
+      setState({
+        ...state,
+        tags: json['tags'].join(';')
+      })
+    })
+
+  };
 
   const addItem: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -134,6 +168,12 @@ function Cadastro() {
           </Form.Group>
           <Form.Group className="mb-3" controlId="tags">
             <Form.Label>Tags</Form.Label>
+            <Button 
+              className="ms-2 mb-2" 
+              size="sm"
+              variant="secondary" 
+              onClick={extrairTags}
+            >Gerar com base na descrição</Button>
             <Form.Control required onChange={updateState} value={state.tags} />
             <Form.Text className="text-muted">
               Utilize ponto e vírgula ( ; ) para adicionar mais de uma tag.

@@ -7,6 +7,7 @@ const endpoints = {
   get_unique_tags: `${backendUrl}/uniquetags/`,
   get_paineis: `${backendUrl}/paineis/`,
   patch_painel: `${backendUrl}/painel/`,
+  extract_keywords: `${backendUrl}/extractkeywords/`
 }
 
 export default endpoints;
